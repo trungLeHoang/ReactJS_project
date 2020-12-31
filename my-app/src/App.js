@@ -1,27 +1,34 @@
-import React from 'react';
+import React, { Component } from 'react';
+import './App.css';
+import Todo from './components/Todo.js'
 
-function App() {
-  return (
-    <div className="app">
-      <main>
-      <div className="search-box">
-        <input
-        className="search-bar"
-        type="text"
-        placeholder="Search"
-        />
+class App extends Component {
+  state = {
+    todo: [
+      {
+        id: 1,
+        title: "wash cloths",
+        completed: false
+      },
+      {
+        id: 2,
+        title: "wash cloths",
+        completed: false
+      },
+      {
+        id: 3,
+        title: "wash cloths",
+        completed: false
+      }
+    ]
+  }
+  render(){
+    return (
+      <div className="App">
+        <Todo todo={this.state.todo}/> 
       </div>
-      <div className="info-box">
-        <div className="location">Pleiku</div>
-        <div className="date-time">9 am December 31st</div>
-      </div>
-      <div className="weather-box">
-        <div className="temperature">27 degree</div>
-        <div className="weather-condition">cloudy</div>
-      </div>
-      </main>
-    </div>
-  );
+    );
+  }
 }
 
 export default App;
