@@ -48,7 +48,7 @@ function App() {
         <div>
           <div className="info-box">
             <div className="location">{weather.name},{weather.sys.country}</div>
-      <div className="date-time">{dateBuilder(new Date())}</div>
+            <div className="date-time">{dateBuilder(new Date())}</div>
           </div>
           <div className="weather-box">
             <div className="temperature">{weather.main.temp} degree</div>
